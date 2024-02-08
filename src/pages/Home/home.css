@@ -1,0 +1,38 @@
+.home-container {
+    height: calc(100vh - 12.5rem);
+    background-image: linear-gradient(45deg,rgb(71, 44, 205), rgb(132, 54, 235), rgb(71, 44, 205));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.home-container > h1 {
+    /* color: rgb(231, 217, 241); */
+    color: aqua;
+    font-size: 3rem;
+    font-weight: 100;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-container > p {
+    /* color: rgb(120, 183, 183); */
+    font-size: larger;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify;
+    line-height: 2rem;
+    text-indent: 3rem;
+    color: white;
+}
+
+.home-container > p::first-letter {
+    font-size: 200%;
+}
+
+.home-container > p > i {
+    font-size: 120%;
+    color: aqua;
+}

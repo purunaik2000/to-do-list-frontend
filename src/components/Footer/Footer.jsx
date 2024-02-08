@@ -3,8 +3,8 @@ import './footer.css';
 
 export default function Footer() {
   return (
-    <div>
-      
+    <div className='footer-container'>
+      <h1>Contact Us:</h1>
     </div>
   );
 }

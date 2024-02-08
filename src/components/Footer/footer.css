@@ -1,0 +1,13 @@
+.footer-container {
+    height: 10rem;
+    /* background-color: rgb(109, 109, 109); */
+    background-image: linear-gradient(45deg,rgb(2, 2, 34), rgb(54, 27, 137), blue);
+    color: white;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.footer-container > h1 {
+    font-size: 1rem;
+    font-weight: 100;
+}
