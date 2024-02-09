@@ -1,7 +1,23 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import './home.css';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../main';
 
 export default function Home() {
+
+  const {state, actions} = useContext(UserContext);
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(!user) navigate( "/login" );
+    if(Number(Date.now()) > Number(user?.time + 1000*60*60)) {
+      localStorage.removeItem("user");
+      actions({...state, user: ""});
+      navigate("/login");
+    }
+  }, []);
   return (
     <div className="home-container">
       <h1>ToDoList</h1>

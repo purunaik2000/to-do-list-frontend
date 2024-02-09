@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import Home from  './pages/Home/Home';
 import Login from './pages/User/Login';
 import Register from './pages/User/Register';
+import Profile from './pages/User/Profile';
 import WorkList from './pages/WorkList/WorkList';
 import NotFound from './pages/NotFound/NotFound';
 
@@ -24,7 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register/" element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/todos" element={<WorkList />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
