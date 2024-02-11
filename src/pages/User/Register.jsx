@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 
 import { TextField, Button } from "@mui/material";
 
-import registerApi from  "../../api/user/register";
+import registerApi from  "../../api/user/registerApi";
 
 export default function Register() {
 
@@ -41,8 +41,8 @@ export default function Register() {
         <div className="text-field-container">
           <TextField onChange={(e)=>setName(e.target.value)} value={name} className="text-field" label="Name" variant="filled" />
           <TextField onChange={(e)=>setEmail(e.target.value)} value={email} className="text-field" label="Email" variant="filled" />
-          <TextField onChange={(e)=>setPassword(e.target.value)} value={password} className="text-field" label="Password" variant="filled" />
-          <TextField onChange={(e)=>setConfirm(e.target.value)} value={confirm} className="text-field" label="Confirm Password" variant="filled" />
+          <TextField onChange={(e)=>setPassword(e.target.value)} value={password} type="password" className="text-field" label="Password" variant="filled" />
+          <TextField onChange={(e)=>setConfirm(e.target.value)} value={confirm} type='password' className="text-field" label="Confirm Password" variant="filled" />
         </div>
         <div className="btn-container">
             <Button className="btn" onClick={submitHandler} variant="standard">Submit</Button>

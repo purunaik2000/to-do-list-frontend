@@ -69,6 +69,10 @@
     gap: 2rem;
 }
 
+.profile-container > .form-container {
+    font-size: 1.5rem;
+}
+
 @media (min-width: 540px) and (max-height: 720px) {
     .register-container > .form-container > .form > .text-field-container {
         gap: 1rem;

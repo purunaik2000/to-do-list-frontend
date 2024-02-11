@@ -3,7 +3,7 @@ import { UserContext } from "../../main";
 import "./user.css";
 import { TextField, Button } from "@mui/material";
 import {useNavigate} from 'react-router-dom';
-import loginApi from "../../api/user/login";
+import loginApi from "../../api/user/loginApi";
 
 export default function Login() {
 
@@ -26,7 +26,6 @@ export default function Login() {
       const user = JSON.stringify(res.data);
       localStorage.setItem("user", user);
       actions({...state, user: res.data});
-      alert(res.message);
       navigate("/");
     }
   }
@@ -42,7 +41,7 @@ export default function Login() {
         <div className="form">
           <div className="text-field-container">
             <TextField onChange={(e)=>setEmail(e.target.value)} value={email} className="text-field" label="Email" variant="filled" />
-            <TextField onChange={(e)=>setPassword(e.target.value)} value={password} className="text-field" label="Password" variant="filled" />
+            <TextField onChange={(e)=>setPassword(e.target.value)} value={password} className="text-field" type="password" label="Password" variant="filled" />
           </div>
           <div className="btn-container">
             <Button className="btn" onClick={submitHandler} variant="standard">Submit</Button>

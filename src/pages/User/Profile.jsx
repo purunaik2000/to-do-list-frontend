@@ -16,15 +16,17 @@ export default function Profile() {
     }
 
     useEffect(()=>{
-        if(!state.user) navigate('./login');
+        if(!state.user) navigate("/login");
     }, []);
   return (
     <div className='profile-container user'>
+      <div className="form-container">
       <h1>Profile</h1>
       <hr />
       <p>Name: {state.user?.name}</p>
       <p>Email: {state.user?.email}</p>
       <Button className='btn' onClick={handleLogout}>Log Out</Button>
+      </div>
     </div>
   );
 }
